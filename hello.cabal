@@ -27,7 +27,10 @@ library
   exposed-modules:
       Ch14.Random
       Ch14.State
+      Ch15.RandomSupply
       Ch15.Supply
+      Ch15.SupplyClass
+      Ch15.SupplyInstance
       Lib
   other-modules:
       Paths_hello
