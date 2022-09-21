@@ -35,4 +35,4 @@ getSt :: State s s
 getSt = State $ \s -> (s, s)
 
 putSt :: s ->  State s ()
-putSt s = State $ \_ -> ((), s)
+putSt s = State $ const ((), s)

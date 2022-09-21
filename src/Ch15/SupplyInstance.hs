@@ -1,4 +1,4 @@
-{-# LANGUAGE FlexibleInstances, GeneralizedNewtypeDeriving, FunctionalDependencies, MultiParamTypeClasses #-}
+{-# LANGUAGE FlexibleInstances, GeneralizedNewtypeDeriving, MultiParamTypeClasses #-}
 
 module Ch15.SupplyInstance() where
 
@@ -11,7 +11,7 @@ instance Functor (Reader a) where
     fmap = liftM
 
 instance Applicative (Reader a) where
-    pure a = R $ \_ -> a
+    pure a = R $ const a
     (<*>) = ap
 
 instance Monad (Reader e) where
@@ -31,7 +31,7 @@ instance Applicative (MySupply a) where
     (<*>) = ap
 
 instance MonadSupply e (MySupply e) where
-    next = MySupply $ do
+    next = MySupply $ do 
              v <- ask
              return (Just v)
 
