@@ -28,7 +28,10 @@ library
       Ch14.Random
       Ch14.State
       Ch15.HandleIO
+      Ch15.MonadHandle
+      Ch15.MonadHandleIO
       Ch15.RandomSupply
+      Ch15.SafeHello
       Ch15.Supply
       Ch15.SupplyClass
       Ch15.SupplyInstance
@@ -40,6 +43,8 @@ library
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
+    , directory
+    , mtl
     , random
   default-language: Haskell2010
 
@@ -52,7 +57,9 @@ executable hello-exe
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , directory
     , hello
+    , mtl
     , random
   default-language: Haskell2010
 
@@ -67,6 +74,8 @@ executable passwdmap-exe
   build-depends:
       base >=4.7 && <5
     , containers
+    , directory
+    , mtl
     , random
   default-language: Haskell2010
 
@@ -80,6 +89,8 @@ test-suite hello-test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , directory
     , hello
+    , mtl
     , random
   default-language: Haskell2010

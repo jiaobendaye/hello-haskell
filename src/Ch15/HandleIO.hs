@@ -1,6 +1,6 @@
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 
-module HandleIO
+module Ch15.HandleIO
         (
           HandleIO
         , Handle
@@ -9,11 +9,15 @@ module HandleIO
         , openFile
         , hClose
         , hPutStrLn
+        , safeHello
+        , tidyHello
         ) where
 
 import System.IO (Handle, IOMode(..))
 import qualified System.IO
 import Control.Monad
+import Control.Monad.Trans (MonadIO(..))
+import System.Directory
 
 
 newtype HandleIO a = HandleIO { runHandleIO :: IO a }
@@ -40,3 +44,11 @@ safeHello path = do
   h <- openFile path WriteMode
   hPutStrLn h "hello world"
   hClose h
+
+instance MonadIO HandleIO where
+        liftIO = HandleIO
+
+tidyHello :: FilePath -> HandleIO ()
+tidyHello path = do
+  safeHello path
+  liftIO (removeFile path)
