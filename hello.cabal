@@ -35,6 +35,8 @@ library
       Ch15.Supply
       Ch15.SupplyClass
       Ch15.SupplyInstance
+      Ch15.TidyHello
+      Ch15.WriterIO
       Lib
   other-modules:
       Paths_hello

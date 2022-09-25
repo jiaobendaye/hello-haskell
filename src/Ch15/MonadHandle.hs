@@ -1,4 +1,4 @@
-{-# LANGUAGE FunctionalDependencies, MultiParamTypeClasses #-}
+{-# LANGUAGE FunctionalDependencies #-}
 
 module Ch15.MonadHandle(
   MonadHandle(..)
