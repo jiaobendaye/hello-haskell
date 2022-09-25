@@ -37,6 +37,8 @@ library
       Ch15.SupplyInstance
       Ch15.TidyHello
       Ch15.WriterIO
+      Ch16.Csv1
+      Ch16.Csv2
       Lib
   other-modules:
       Paths_hello
@@ -47,6 +49,7 @@ library
       base >=4.7 && <5
     , directory
     , mtl
+    , parsec
     , random
   default-language: Haskell2010
 
@@ -62,6 +65,7 @@ executable hello-exe
     , directory
     , hello
     , mtl
+    , parsec
     , random
   default-language: Haskell2010
 
@@ -78,6 +82,7 @@ executable passwdmap-exe
     , containers
     , directory
     , mtl
+    , parsec
     , random
   default-language: Haskell2010
 
@@ -94,5 +99,6 @@ test-suite hello-test
     , directory
     , hello
     , mtl
+    , parsec
     , random
   default-language: Haskell2010

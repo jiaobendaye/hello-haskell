@@ -1,7 +1,7 @@
 module Ch15.SafeHello where
 
 import Ch15.MonadHandle
-import Ch15.MonadHandleIO
+import Ch15.MonadHandleIO()
 import System.IO(IOMode(..))
 
 safeHello' :: MonadHandle h m => FilePath -> m ()
