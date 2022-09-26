@@ -39,6 +39,8 @@ library
       Ch15.WriterIO
       Ch16.Csv1
       Ch16.Csv2
+      Ch16.Csv9
+      Ch16.FormParse
       Lib
   other-modules:
       Paths_hello
