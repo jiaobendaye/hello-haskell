@@ -8,6 +8,9 @@ import Ch15.SafeHello
 import Ch15.Supply 
 import Ch15.TidyHello
 import Ch15.WriterIO
+import Text.ParserCombinators.Parsec (parseTest)
+import Ch16.FormApp
+import Ch16.FormParse
 import System.Random hiding (next)
 
 main :: IO ()
@@ -15,7 +18,9 @@ main =  do
   putStrLn "test begain"
   -- testSafeHello
   -- testWriteIO
-  testTidyHello
+  -- testTidyHello
+  testFormParse
+  testFormParseApp
   putStrLn "test done"
 
 testSafeHello:: IO()
@@ -46,3 +51,11 @@ testHandleIO = do
   path <- getLine
   runHandleIO (safeHello path)
   runHandleIO (tidyHello path)
+
+testFormParse :: IO()
+testFormParse =  do
+  parseTest pQuery "foo=bar&a%21=b+c"
+
+testFormParseApp :: IO()
+testFormParseApp =  do
+  parseTest aQuery "foo=bar&a%21=b+c"

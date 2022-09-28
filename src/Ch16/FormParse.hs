@@ -1,4 +1,6 @@
-module Ch16.FormParse where
+module Ch16.FormParse(
+  pQuery
+) where
 
 import Text.ParserCombinators.Parsec
 import Numeric
@@ -13,6 +15,7 @@ pPair = do
   value <- optionMaybe (char '=' >> many pChar)
   return (name, value)
 
+-- applicative style
 pPairApp1 :: CharParser () (String, Maybe String)
 pPairApp1 =
     liftM2 (,) (many1 pChar) (optionMaybe (char '=' >> many pChar))

@@ -40,7 +40,10 @@ library
       Ch16.Csv1
       Ch16.Csv2
       Ch16.Csv9
+      Ch16.FormApp
       Ch16.FormParse
+      Ch16.JSONClass
+      Ch16.JSONParsec
       Lib
   other-modules:
       Paths_hello
