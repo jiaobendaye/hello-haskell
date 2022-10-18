@@ -8,10 +8,13 @@ import Ch15.SafeHello
 import Ch15.Supply 
 import Ch15.TidyHello
 import Ch15.WriterIO
+import Ch18.CountEntriesT (countEntries)
 import Text.ParserCombinators.Parsec (parseTest)
+import Control.Monad.Writer (execWriterT)
 import Ch16.FormApp
 import Ch16.FormParse
 import System.Random hiding (next)
+
 
 main :: IO ()
 main =  do
@@ -19,8 +22,9 @@ main =  do
   -- testSafeHello
   -- testWriteIO
   -- testTidyHello
-  testFormParse
-  testFormParseApp
+  -- testFormParse
+  -- testFormParseApp
+  testCountEntries
   putStrLn "test done"
 
 testSafeHello:: IO()
@@ -59,3 +63,8 @@ testFormParse =  do
 testFormParseApp :: IO()
 testFormParseApp =  do
   parseTest aQuery "foo=bar&a%21=b+c"
+
+testCountEntries :: IO()
+testCountEntries = do
+  a <-  execWriterT $ countEntries "."
+  print $ take 4 a

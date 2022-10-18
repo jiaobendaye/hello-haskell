@@ -25,6 +25,7 @@ dependencies:
 - mtl
 - directory
 - parsec
+- filepath
 
 ghc-options:
 - -Wall
@@ -50,16 +51,6 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - hello
-
-  passwdmap-exe:
-    main:                passwdmap.hs
-    source-dirs:         app
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
-    dependencies:
-    - containers
 
 tests:
   hello-test:

@@ -44,6 +44,9 @@ library
       Ch16.FormParse
       Ch16.JSONClass
       Ch16.JSONParsec
+      Ch18.CountEntries
+      Ch18.CountEntriesT
+      Ch18.UglyStack
       Lib
   other-modules:
       Paths_hello
@@ -53,6 +56,7 @@ library
   build-depends:
       base >=4.7 && <5
     , directory
+    , filepath
     , mtl
     , parsec
     , random
@@ -68,24 +72,8 @@ executable hello-exe
   build-depends:
       base >=4.7 && <5
     , directory
+    , filepath
     , hello
-    , mtl
-    , parsec
-    , random
-  default-language: Haskell2010
-
-executable passwdmap-exe
-  main-is: passwdmap.hs
-  other-modules:
-      Main
-      Paths_hello
-  hs-source-dirs:
-      app
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , containers
-    , directory
     , mtl
     , parsec
     , random
@@ -102,6 +90,7 @@ test-suite hello-test
   build-depends:
       base >=4.7 && <5
     , directory
+    , filepath
     , hello
     , mtl
     , parsec
