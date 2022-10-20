@@ -46,6 +46,7 @@ library
       Ch16.JSONParsec
       Ch18.CountEntries
       Ch18.CountEntriesT
+      Ch18.MaybeT
       Ch18.UglyStack
       Lib
   other-modules:
