@@ -48,6 +48,8 @@ library
       Ch18.CountEntriesT
       Ch18.MaybeT
       Ch18.UglyStack
+      Ch19.Divby
+      Ch19.Divby8
       Lib
   other-modules:
       Paths_hello
