@@ -50,6 +50,7 @@ library
       Ch18.UglyStack
       Ch19.Divby
       Ch19.Divby8
+      Ch19.Toupper
       Lib
   other-modules:
       Paths_hello
