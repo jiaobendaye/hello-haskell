@@ -51,6 +51,7 @@ library
       Ch19.Divby
       Ch19.Divby8
       Ch19.Toupper
+      Ch20.Posixtime
       Lib
   other-modules:
       Paths_hello
@@ -62,8 +63,10 @@ library
     , directory
     , filepath
     , mtl
+    , old-time
     , parsec
     , random
+    , unix
   default-language: Haskell2010
 
 executable hello-exe
@@ -79,8 +82,10 @@ executable hello-exe
     , filepath
     , hello
     , mtl
+    , old-time
     , parsec
     , random
+    , unix
   default-language: Haskell2010
 
 test-suite hello-test
@@ -97,6 +102,8 @@ test-suite hello-test
     , filepath
     , hello
     , mtl
+    , old-time
     , parsec
     , random
+    , unix
   default-language: Haskell2010

@@ -26,6 +26,8 @@ dependencies:
 - directory
 - parsec
 - filepath
+- old-time
+- unix
 
 ghc-options:
 - -Wall
