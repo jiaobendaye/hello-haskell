@@ -29,6 +29,8 @@ library
       Ch03.Lending
       Ch03.ListADT
       Ch03.Tree
+      Ch04.InteractWith
+      Ch04.SplitLines
       Ch14.Random
       Ch14.State
       Ch15.HandleIO
