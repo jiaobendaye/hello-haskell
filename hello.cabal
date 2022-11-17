@@ -25,6 +25,10 @@ source-repository head
 
 library
   exposed-modules:
+      Ch03.BookStore
+      Ch03.Lending
+      Ch03.ListADT
+      Ch03.Tree
       Ch14.Random
       Ch14.State
       Ch15.HandleIO
