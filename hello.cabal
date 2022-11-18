@@ -29,8 +29,15 @@ library
       Ch03.Lending
       Ch03.ListADT
       Ch03.Tree
+      Ch04.Adler32
+      Ch04.Dlts
+      Ch04.Filter
+      Ch04.Foldl
+      Ch04.Foldr
       Ch04.InteractWith
       Ch04.SplitLines
+      Ch04.StrictFoldl
+      Ch04.Suffixes
       Ch14.Random
       Ch14.State
       Ch15.HandleIO
