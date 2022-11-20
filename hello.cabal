@@ -38,6 +38,14 @@ library
       Ch04.SplitLines
       Ch04.StrictFoldl
       Ch04.Suffixes
+      Ch05.SimpleJSON
+      Ch06.BrokenClass
+      Ch06.Eqclasses
+      Ch06.JSONClass
+      Ch06.Naiveeq
+      Ch06.Newtype
+      Ch06.Overlap
+      Ch06.SimpleClass
       Ch14.Random
       Ch14.State
       Ch15.HandleIO
