@@ -46,6 +46,15 @@ library
       Ch06.Newtype
       Ch06.Overlap
       Ch06.SimpleClass
+      Ch07.Actions
+      Ch07.Actions2
+      Ch07.Callingpure
+      Ch07.TempFile
+      Ch07.ToupperImp
+      Ch07.ToupperLazy1
+      Ch07.ToupperLazy2
+      Ch07.ToupperLazy3
+      Ch07.ToupperLazy4
       Ch14.Random
       Ch14.State
       Ch15.HandleIO
