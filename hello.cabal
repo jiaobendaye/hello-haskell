@@ -60,6 +60,11 @@ library
       Ch08.GlobRegex
       Ch08.HighestClose
       Ch08.Useful
+      Ch09.BetterPredicate
+      Ch09.ControlledVisit
+      Ch09.FoldDir
+      Ch09.RecursiveContents
+      Ch09.SimpleFinder
       Ch14.Random
       Ch14.State
       Ch15.HandleIO
@@ -103,6 +108,7 @@ library
     , parsec
     , random
     , regex-posix
+    , time
     , unix
   default-language: Haskell2010
 
@@ -124,6 +130,7 @@ executable hello-exe
     , parsec
     , random
     , regex-posix
+    , time
     , unix
   default-language: Haskell2010
 
@@ -146,5 +153,6 @@ test-suite hello-test
     , parsec
     , random
     , regex-posix
+    , time
     , unix
   default-language: Haskell2010

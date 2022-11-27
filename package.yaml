@@ -30,6 +30,7 @@ dependencies:
 - unix
 - bytestring
 - regex-posix
+- time
 
 ghc-options:
 - -Wall
