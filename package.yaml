@@ -28,6 +28,8 @@ dependencies:
 - filepath
 - old-time
 - unix
+- bytestring
+- regex-posix
 
 ghc-options:
 - -Wall

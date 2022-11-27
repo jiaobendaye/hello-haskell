@@ -55,6 +55,11 @@ library
       Ch07.ToupperLazy2
       Ch07.ToupperLazy3
       Ch07.ToupperLazy4
+      Ch08.ElfMagic
+      Ch08.Glob
+      Ch08.GlobRegex
+      Ch08.HighestClose
+      Ch08.Useful
       Ch14.Random
       Ch14.State
       Ch15.HandleIO
@@ -90,12 +95,14 @@ library
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
+    , bytestring
     , directory
     , filepath
     , mtl
     , old-time
     , parsec
     , random
+    , regex-posix
     , unix
   default-language: Haskell2010
 
@@ -108,6 +115,7 @@ executable hello-exe
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , bytestring
     , directory
     , filepath
     , hello
@@ -115,6 +123,7 @@ executable hello-exe
     , old-time
     , parsec
     , random
+    , regex-posix
     , unix
   default-language: Haskell2010
 
@@ -128,6 +137,7 @@ test-suite hello-test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , bytestring
     , directory
     , filepath
     , hello
@@ -135,5 +145,6 @@ test-suite hello-test
     , old-time
     , parsec
     , random
+    , regex-posix
     , unix
   default-language: Haskell2010
