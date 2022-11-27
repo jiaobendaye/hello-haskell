@@ -31,6 +31,7 @@ dependencies:
 - bytestring
 - regex-posix
 - time
+- QuickCheck
 
 ghc-options:
 - -Wall

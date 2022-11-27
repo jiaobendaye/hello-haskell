@@ -68,6 +68,10 @@ library
       Ch10.Parse
       Ch10.PNM
       Ch10.TreeMap
+      Ch11.Arbitrary
+      Ch11.Prettify2
+      Ch11.QC
+      Ch11.QCBasics
       Ch14.Random
       Ch14.State
       Ch15.HandleIO
@@ -102,7 +106,8 @@ library
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
-      base >=4.7 && <5
+      QuickCheck
+    , base >=4.7 && <5
     , bytestring
     , directory
     , filepath
@@ -123,7 +128,8 @@ executable hello-exe
       app
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      QuickCheck
+    , base >=4.7 && <5
     , bytestring
     , directory
     , filepath
@@ -146,7 +152,8 @@ test-suite hello-test
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      QuickCheck
+    , base >=4.7 && <5
     , bytestring
     , directory
     , filepath

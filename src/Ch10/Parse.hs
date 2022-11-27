@@ -1,3 +1,4 @@
+{-# LANGUAGE LambdaCase #-}
 module Ch10.Parse where
 
 import qualified Data.ByteString.Lazy as L
@@ -92,9 +93,9 @@ parseWhile p = (fmap p <$> peekByte) ==> \mp ->
 
 parseWhileVerbose:: (Word8 -> Bool) -> Parse [Word8]
 parseWhileVerbose p =
-    -- peekByte ==> \case
-    peekByte ==> \mc -> 
-      case mc of
+    peekByte ==> \case
+    -- peekByte ==> \mc -> 
+    --   case mc of
       Nothing -> identity [];
       Just c
         | p c -> parseByte ==> \ b -> parseWhileVerbose p ==> \ bs -> identity (b : bs)
