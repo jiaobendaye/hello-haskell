@@ -65,6 +65,9 @@ library
       Ch09.FoldDir
       Ch09.RecursiveContents
       Ch09.SimpleFinder
+      Ch10.Parse
+      Ch10.PNM
+      Ch10.TreeMap
       Ch14.Random
       Ch14.State
       Ch15.HandleIO
