@@ -1,6 +1,7 @@
 module Ch11.Prettify2 where
 
 import Test.QuickCheck
+import Data.Char
 import Control.Monad
 import Prelude hiding ((<>))
 

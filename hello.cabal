@@ -38,6 +38,10 @@ library
       Ch04.SplitLines
       Ch04.StrictFoldl
       Ch04.Suffixes
+      Ch05.Prettify
+      Ch05.PrettyJSON
+      Ch05.PrettyStub
+      Ch05.PutJSON
       Ch05.SimpleJSON
       Ch06.BrokenClass
       Ch06.Eqclasses
@@ -72,6 +76,7 @@ library
       Ch11.Prettify2
       Ch11.QC
       Ch11.QCBasics
+      Ch11.Run
       Ch14.Random
       Ch14.State
       Ch15.HandleIO

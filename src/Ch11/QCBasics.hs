@@ -2,6 +2,7 @@ module Ch11.QCBasics where
 
 import Test.QuickCheck
 import Data.List
+import Data.Char
 
 qsort :: Ord a => [a] -> [a]
 qsort []     = []
@@ -33,4 +34,15 @@ prop_append xs ys       =
         head (qsort (xs ++ ys)) == min (minimum xs) (minimum ys)
 
 prop_sort_model xs      = sort xs == qsort xs
+
+empty :: [a]
+empty = []
+
+prop_empty_id x = empty <> x == x && x <> empty == x
+
+-- prop_hcat xs = hcat xs == glue xs
+--     where
+--         glue []     = empty
+--         glue (d:ds) = d <> glue ds
+
 
