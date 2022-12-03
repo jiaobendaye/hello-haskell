@@ -10,6 +10,7 @@ anal = Args
     , maxDiscardRatio = 1
     , maxSize = 1000
     , chatty = True
+    , maxShrinks = 0
     }
 
 minimal :: Args
@@ -19,6 +20,7 @@ minimal = Args
     , maxDiscardRatio = 1
     , maxSize = 200
     , chatty = True
+    , maxShrinks = 0
     }
 
 runTests :: Args -> IO ()
@@ -33,7 +35,7 @@ runTests args = do
     where
         f prop str = do
             putStrLn str
-            quickCheckWithResult args prop
+            _ <- quickCheckWithResult args prop
             return ()
 
 main :: IO ()

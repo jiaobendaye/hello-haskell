@@ -32,6 +32,8 @@ dependencies:
 - regex-posix
 - time
 - QuickCheck
+- containers
+- array
 
 ghc-options:
 - -Wall
