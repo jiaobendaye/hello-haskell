@@ -35,6 +35,4 @@ getOne bounds = do g <- getSt
                    return x
 
 makeRandomValue :: StdGen -> (Int, StdGen)
-makeRandomValue = runState (do 
-                            n <- getOne (1, 100)
-                            return n)
+makeRandomValue = runState (do  getOne (1, 100))

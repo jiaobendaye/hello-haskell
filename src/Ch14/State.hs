@@ -27,8 +27,8 @@ instance Applicative (State s) where
   (<*>) = ap
 
 instance Monad (State s) where
-        return = returnState
-        (>>=) = bindState
+  return = returnState
+  (>>=) = bindState
 
 
 getSt :: State s s 

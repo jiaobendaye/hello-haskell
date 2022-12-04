@@ -82,6 +82,7 @@ library
       Ch13.Num
       Ch13.PasswdAl
       Ch13.Passwdmap
+      Ch14.Logger
       Ch14.Random
       Ch14.State
       Ch15.HandleIO
